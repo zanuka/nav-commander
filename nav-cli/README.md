@@ -12,7 +12,6 @@
     getblock "hash" ( verbose )
     getblockchaininfo
     getblockcount
-
     getblockhash index
     getblockhashes timestamp
     getblockheader "hash" ( verbose )
