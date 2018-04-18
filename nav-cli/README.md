@@ -8,9 +8,9 @@
 - navcoin-cli [getaddressutxos](address-index/getaddressutxos.md)
 
 ## == Blockchain ==
-- navcoin-cli getbestblockhash
-- navcoin-cli getblock "hash"
-- navcoin-cli getblockchaininfo
+- navcoin-cli [getbestblockhash](blockchain/getbestblockhash.md)
+- navcoin-cli [getblock](blockchain/getblock.md) "hash"
+- navcoin-cli [getblockchaininfo](blockchain/getblockchaininfo.md)
 - navcoin-cli getblockcount
 - navcoin-cli getblockhash index
 - navcoin-cli getblockhashes timestamp
@@ -25,8 +25,8 @@
 - navcoin-cli getproposal "hash"
 - navcoin-cli getrawmempool
 - navcoin-cli getspentinfo
-- navcoin-cli gettxout "txid" n
-- navcoin-cli gettxoutproof ["txid",...]
+- navcoin-cli [gettxout](blockchain/gettxout.md) "txid" n
+- navcoin-cli [gettxoutproof](blockchain/gettxoutproof.md) ["txid",...]
 - navcoin-cli gettxoutsetinfo
 - navcoin-cli verifychain
 - navcoin-cli verifytxoutproof "proof"
@@ -41,8 +41,8 @@
 - navcoin-cli generatetoaddress numblocks address
 
 ## == Network ==
-- navcoin-cli addanonserver "node" "add|remove"
-- navcoin-cli addnode "node" "add|remove|onetry"
+- navcoin-cli addanonserver "node" "add/remove"
+- navcoin-cli addnode "node" "add/remove/onetry"
 - navcoin-cli clearbanned
 - navcoin-cli disconnectnode "node"
 - navcoin-cli getaddednodeinfo dummy
@@ -55,7 +55,7 @@
 - navcoin-cli ping
 
 ## == Rawtransactions ==
-- navcoin-cli decoderawtransaction "hexstring"
+- navcoin-cli [decoderawtransaction](raw-transactions/decoderawtransaction.md) "hexstring"
 - navcoin-cli decodescript
 - navcoin-cli getrawtransaction "txid"
 
@@ -67,7 +67,7 @@
 - navcoin-cli getreceivedbyaccount "account"
 - navcoin-cli getreceivedbyaddress "navcoinaddress"
 - navcoin-cli getstakereport
-- navcoin-cli gettransaction "hash"
+- navcoin-cli [gettransaction](wallet/gettransaction.md) "hash"
 - navcoin-cli getunconfirmedbalance
 - navcoin-cli getwalletinfo
 - navcoin-cli importaddress "address"
