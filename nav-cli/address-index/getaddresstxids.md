@@ -24,7 +24,42 @@ Returns the txids for an address(es) (requires addressindex to be enabled).
 ```
 
 ## Examples:
-```
-> navcoin-cli getaddresstxids '{"addresses": ["12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX"]}'
-> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddresstxids", "params": [{"addresses": ["12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX"]}] }' -H 'content-type: text/plain;' http://127.0.0.1:5555/
-```
+
+To get transaction ids for a NAV address:
+
+    > navcoin-cli getaddresstxids '{"addresses": ["NUDke42E3fwLqaBbBFRyVSTETuhWAi7ugk"]}'
+
+If addressindex is enabled, this should return an array of transaction ids (txids):
+
+    [
+      "c6b6063a0512ed40958bff62a48168b4b30f89cb6bce22b722f8a6d00fcb9d98",
+      "08f87e9de0fd9be71bc91f42d45c48bb9494df5d5df47df7354eec0adbf35731",
+      "52489abff43212445d432f6042e5b9faf99b3c843a79210629b5383f52694ec5",
+      "01f7b0831f174beb8a9b0990ca8bae197f6f1e4fe3d306c755d9f52da5687a9d"
+    ]
+
+To enable addressindex, edit the navcoin.conf file:
+
+**/root/.navcoin4/navcoin.conf`**
+
+`addressindex=1`
+
+After enabling addressindex you'll need to reboot the instance with `docker-compose up`
+
+Once the updated chain info downloaded, you'll be able to run `getaddresstxids` successfully.
+
+## Authentication
+
+If you want to execute the rpc commands, you'll need to pass credentials:
+
+    > navcoin-cli -rpcuser=youruser -rpcpassword=yourpassword getaddresstxids '{"addresses": 
+    ["NUDke42E3fwLqaBbBFRyVSTETuhWAi7ugk"]}'
+
+To avoid entering `-rpcuser` and `-rpcpassword` flags with each command, add them to the navcoin.conf file:
+
+**/root/.navcoin4/navcoin.conf**
+
+    addressindex=1
+    rpcuser=youruser
+    rpcpassword=yourpassword
+
