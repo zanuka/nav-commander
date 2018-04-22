@@ -33,6 +33,3 @@ Returns details about an unspent transaction output.
 
 ### View the details
     > navcoin-cli gettxout "txid" 1
-
-### As a json rpc call
-    > curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettxout", "params": ["txid", 1] }' -H 'content-type: text/plain;' http://127.0.0.1:5555/
