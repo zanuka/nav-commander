@@ -11,7 +11,7 @@
 - navcoin-cli [getbestblockhash](blockchain/getbestblockhash.md)
 - navcoin-cli [getblock](blockchain/getblock.md) "hash"
 - navcoin-cli [getblockchaininfo](blockchain/getblockchaininfo.md)
-- navcoin-cli getblockcount
+- navcoin-cli [getblockcount](blockchain/getblockcount.md)
 - navcoin-cli getblockhash index
 - navcoin-cli getblockhashes timestamp
 - navcoin-cli getblockheader "hash"
