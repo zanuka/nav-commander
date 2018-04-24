@@ -12,9 +12,9 @@
 - navcoin-cli [getblock](blockchain/getblock.md) "hash"
 - navcoin-cli [getblockchaininfo](blockchain/getblockchaininfo.md)
 - navcoin-cli [getblockcount](blockchain/getblockcount.md)
-- navcoin-cli getblockhash index
+- navcoin-cli [getblockhash](blockchain/getblockhash.md) index
 - navcoin-cli getblockhashes timestamp
-- navcoin-cli getblockheader "hash"
+- navcoin-cli [getblockheader](blockchain/getblockheader.md) "hash"
 - navcoin-cli getchaintips
 - navcoin-cli getdifficulty
 - navcoin-cli getmempoolancestors txid
@@ -57,7 +57,7 @@
 ## == Rawtransactions ==
 - navcoin-cli [decoderawtransaction](raw-transactions/decoderawtransaction.md) "hexstring"
 - navcoin-cli decodescript
-- navcoin-cli getrawtransaction "txid"
+- navcoin-cli [getrawtransaction](raw-transactions/getrawtransaction.md) "txid"
 
 ## == Wallet ==
 - navcoin-cli getanondestination "navcoinaddress"
