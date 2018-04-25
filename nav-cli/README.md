@@ -15,7 +15,7 @@
 - navcoin-cli [getblockhash](blockchain/getblockhash.md) index
 - navcoin-cli [getblockhashes](blockchain/getblockhashes.md) timestamp
 - navcoin-cli [getblockheader](blockchain/getblockheader.md) "hash"
-- navcoin-cli getchaintips
+- navcoin-cli [getchaintips](blockchain/getchaintips.md)
 - navcoin-cli getdifficulty
 - navcoin-cli getmempoolancestors txid
 - navcoin-cli getmempooldescendants txid
