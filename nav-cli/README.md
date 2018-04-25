@@ -27,7 +27,7 @@
 - navcoin-cli [getspentinfo](blockchain/getspentinfo.md)
 - navcoin-cli [gettxout](blockchain/gettxout.md) "txid" n
 - navcoin-cli [gettxoutproof](blockchain/gettxoutproof.md) ["txid",...]
-- navcoin-cli gettxoutsetinfo
+- navcoin-cli [gettxoutsetinfo](blockchain/gettxoutsetinfo.md)
 - navcoin-cli verifychain
 - navcoin-cli verifytxoutproof "proof"
 
