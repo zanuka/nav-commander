@@ -27,7 +27,7 @@ Returns the txids for an address(es) (requires addressindex to be enabled).
 
 To get transaction ids for a NAV address:
 
-    > navcoin-cli getaddresstxids '{"addresses": ["NUDke42E3fwLqaBbBFRyVSTETuhWAi7ugk"]}'
+    > navcoin-cli getaddresstxids '{"addresses": ["NW7uXr4ZAeJKigMGnKbSLfCBQY59cH1T8G"]}'
 
 If addressindex is enabled, this should return an array of transaction ids (txids):
 
@@ -52,8 +52,8 @@ Once the updated chain info downloaded, you'll be able to run `getaddresstxids` 
 
 If you want to execute the rpc commands, you'll need to pass credentials:
 
-    > navcoin-cli -rpcuser=youruser -rpcpassword=yourpassword getaddresstxids '{"addresses": 
-    ["NUDke42E3fwLqaBbBFRyVSTETuhWAi7ugk"]}'
+    > navcoin-cli -rpcuser=youruser -rpcpassword=yourpassword getaddresstxids '{"addresses":
+    ["NW7uXr4ZAeJKigMGnKbSLfCBQY59cH1T8G"]}'
 
 To avoid entering `-rpcuser` and `-rpcpassword` flags with each command, add them to the navcoin.conf file:
 
