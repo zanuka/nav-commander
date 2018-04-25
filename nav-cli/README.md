@@ -20,7 +20,7 @@
 - navcoin-cli [getmempoolancestors](blockchain/getmempoolancestors.md) txid
 - navcoin-cli [getmempooldescendants](blockchain/getmempooldescendants.md) txid
 - navcoin-cli [getmempoolentry](blockchain/getmempoolentry.md) txid
-- navcoin-cli getmempoolinfo
+- navcoin-cli [getmempoolinfo](blockchain/getmempoolinfo.md)
 - navcoin-cli getpaymentrequest "hash"
 - navcoin-cli getproposal "hash"
 - navcoin-cli getrawmempool
