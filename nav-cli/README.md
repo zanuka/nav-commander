@@ -28,7 +28,7 @@
 - navcoin-cli [gettxout](blockchain/gettxout.md) "txid" n
 - navcoin-cli [gettxoutproof](blockchain/gettxoutproof.md) ["txid",...]
 - navcoin-cli [gettxoutsetinfo](blockchain/gettxoutsetinfo.md)
-- navcoin-cli verifychain
+- navcoin-cli [verifychain](blockchain/verifychain.md)
 - navcoin-cli verifytxoutproof "proof"
 
 ## == Control ==
