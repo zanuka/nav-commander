@@ -1,0 +1,3 @@
+# stop
+
+Stop NavCoin server.

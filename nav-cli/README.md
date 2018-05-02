@@ -34,7 +34,7 @@
 ## == Control ==
 - navcoin-cli [getinfo](control/getinfo.md)
 - navcoin-cli [help](control/help.md)
-- navcoin-cli stop
+- navcoin-cli [stop](control/stop.md)
 
 ## == Generating ==
 - navcoin-cli generate numblocks
