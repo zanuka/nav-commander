@@ -33,7 +33,7 @@
 
 ## == Control ==
 - navcoin-cli [getinfo](control/getinfo.md)
-- navcoin-cli help
+- navcoin-cli [help](control/help.md)
 - navcoin-cli stop
 
 ## == Generating ==
