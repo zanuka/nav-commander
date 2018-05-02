@@ -37,7 +37,7 @@
 - navcoin-cli [stop](control/stop.md)
 
 ## == Generating ==
-- navcoin-cli generate numblocks
+- navcoin-cli [generate](generating/generate.md) numblocks
 - navcoin-cli generatetoaddress numblocks address
 
 ## == Network ==
