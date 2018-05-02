@@ -38,7 +38,7 @@
 
 ## == Generating ==
 - navcoin-cli [generate](generating/generate.md) numblocks
-- navcoin-cli generatetoaddress numblocks address
+- navcoin-cli [generatetoaddress](generating/generatetoaddress.md) numblocks address
 
 ## == Network ==
 - navcoin-cli addanonserver "node" "add/remove"

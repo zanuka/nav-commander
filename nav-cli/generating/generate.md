@@ -11,5 +11,5 @@ Mine up to numblocks blocks immediately (before the RPC call returns)
 
 ## Examples:
 
-Generate 1 blocks
+Generate 1 block
     > navcoin-cli generate 1
