@@ -41,7 +41,7 @@
 - navcoin-cli [generatetoaddress](generating/generatetoaddress.md) numblocks address
 
 ## == Network ==
-- navcoin-cli addanonserver "node" "add/remove"
+- navcoin-cli [addanonserver](network/addanonserver.md) "node" "add/remove"
 - navcoin-cli addnode "node" "add/remove/onetry"
 - navcoin-cli clearbanned
 - navcoin-cli disconnectnode "node"
