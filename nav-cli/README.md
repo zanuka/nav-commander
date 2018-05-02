@@ -32,7 +32,7 @@
 - navcoin-cli [verifytxoutproof](blockchain/verifytxoutproof.md) "proof"
 
 ## == Control ==
-- navcoin-cli getinfo
+- navcoin-cli [getinfo](control/getinfo.md)
 - navcoin-cli help
 - navcoin-cli stop
 
