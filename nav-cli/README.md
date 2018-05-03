@@ -56,7 +56,7 @@
 
 ## == Rawtransactions ==
 - navcoin-cli [decoderawtransaction](raw-transactions/decoderawtransaction.md) "hexstring"
-- navcoin-cli decodescript
+- navcoin-cli [decodescript](raw-transactions/decodescript.md)
 - navcoin-cli [getrawtransaction](raw-transactions/getrawtransaction.md) "txid"
 
 ## == Wallet ==
