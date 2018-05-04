@@ -42,7 +42,7 @@
 
 ## == Network ==
 - navcoin-cli [addanonserver](network/addanonserver.md) "node" "add/remove"
-- navcoin-cli [addnode](network/decodescript.md) "node" "add/remove/onetry"
+- navcoin-cli [addnode](network/addnode.md) "node" "add/remove/onetry"
 - navcoin-cli clearbanned
 - navcoin-cli disconnectnode "node"
 - navcoin-cli getaddednodeinfo dummy
