@@ -60,7 +60,7 @@
 - navcoin-cli [getrawtransaction](raw-transactions/getrawtransaction.md) "txid"
 
 ## == Wallet ==
-- navcoin-cli getanondestination "navcoinaddress"
+- navcoin-cli [getanondestination](wallet/getanondestination.md) "navcoinaddress"
 - navcoin-cli getbalance
 - navcoin-cli getnewaddress
 - navcoin-cli getrawchangeaddress
