@@ -46,7 +46,7 @@
 - navcoin-cli [clearbanned](network/clearbanned.md)
 - navcoin-cli [disconnectnode](network/disconnectnode.md) "node"
 - navcoin-cli [getaddednodeinfo](network/getaddednodeinfo.md) dummy
-- navcoin-cli getconnectioncount
+- navcoin-cli [getconnectioncount](network/getconnectioncount.md)
 - navcoin-cli getnettotals
 - navcoin-cli getnetworkinfo
 - navcoin-cli getpeerinfo
