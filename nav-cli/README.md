@@ -80,7 +80,7 @@
 - navcoin-cli listaddressgroupings
 - navcoin-cli listlockunspent
 - navcoin-cli listreceivedbyaccount
-- navcoin-cli listreceivedbyaddress
+- navcoin-cli [listreceivedbyaddress](wallet/listreceivedbyaddress.md)
 - navcoin-cli listsinceblock
 - navcoin-cli listtransactions
 - navcoin-cli listunspent
