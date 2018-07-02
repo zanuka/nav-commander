@@ -52,7 +52,7 @@
 - navcoin-cli [getpeerinfo](network/getpeerinfo.md)
 - navcoin-cli [getstakesubsidy](network/getstakesubsidy.md) <hex string>
 - navcoin-cli [listbanned](network/listbanned.md)
-- navcoin-cli ping
+- navcoin-cli [ping](network/ping.md)
 
 ## == Rawtransactions ==
 - navcoin-cli [decoderawtransaction](raw-transactions/decoderawtransaction.md) "hexstring"
