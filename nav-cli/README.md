@@ -49,7 +49,7 @@
 - navcoin-cli [getconnectioncount](network/getconnectioncount.md)
 - navcoin-cli [getnettotals](network/getnettotals.md)
 - navcoin-cli [getnetworkinfo](network/getnetworkinfo.md)
-- navcoin-cli getpeerinfo
+- navcoin-cli [getpeerinfo](network/getpeerinfo.md)
 - navcoin-cli getstakesubsidy <hex string>
 - navcoin-cli listbanned
 - navcoin-cli ping
