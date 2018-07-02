@@ -51,7 +51,7 @@
 - navcoin-cli [getnetworkinfo](network/getnetworkinfo.md)
 - navcoin-cli [getpeerinfo](network/getpeerinfo.md)
 - navcoin-cli [getstakesubsidy](network/getstakesubsidy.md) <hex string>
-- navcoin-cli listbanned
+- navcoin-cli [listbanned](network/listbanned.md)
 - navcoin-cli ping
 
 ## == Rawtransactions ==
