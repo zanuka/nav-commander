@@ -47,7 +47,7 @@
 - navcoin-cli [disconnectnode](network/disconnectnode.md) "node"
 - navcoin-cli [getaddednodeinfo](network/getaddednodeinfo.md) dummy
 - navcoin-cli [getconnectioncount](network/getconnectioncount.md)
-- navcoin-cli getnettotals
+- navcoin-cli [getnettotals](network/getnettotals.md)
 - navcoin-cli getnetworkinfo
 - navcoin-cli getpeerinfo
 - navcoin-cli getstakesubsidy <hex string>
