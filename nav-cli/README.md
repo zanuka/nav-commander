@@ -48,7 +48,7 @@
 - navcoin-cli [getaddednodeinfo](network/getaddednodeinfo.md) dummy
 - navcoin-cli [getconnectioncount](network/getconnectioncount.md)
 - navcoin-cli [getnettotals](network/getnettotals.md)
-- navcoin-cli getnetworkinfo
+- navcoin-cli [getnetworkinfo](network/getnetworkinfo.md)
 - navcoin-cli getpeerinfo
 - navcoin-cli getstakesubsidy <hex string>
 - navcoin-cli listbanned
