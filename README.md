@@ -1,7 +1,7 @@
 # nav-commander
 
-Development docs, notes, and workflow tips for NavCoin OSS projects. 
+Development docs, notes, and workflow tips for NavCoin projects.
 
-## Focus
-- navcoin-cli (navcoind) rpc commands
-- navcoin api development
+## Contents
+- [navcoin-cli](navcoin-cli/)
+- [navpi](navpi/)
