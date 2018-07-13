@@ -46,8 +46,8 @@ Or install `htop:`
   - ctrl + O to `WriteOut` the file
   - press enter
   - ctrl + X to `Exit` nano editor
-  - stop service `sudo /etc/init.d/dphys-swapfile stop` (you'll see an [ok] message)
-  - start service `sudo /etc/init.d/dphys-swapfile start`
+  - restart service `sudo /etc/init.d/dphys-swapfile restart
+
 
 ### Errors to deal with...
 
