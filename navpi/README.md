@@ -49,6 +49,10 @@ Or install `htop:`
   - stop service `sudo /etc/init.d/dphys-swapfile stop` (you'll see an [ok] message)
   - start service `sudo /etc/init.d/dphys-swapfile start`
 
+### Errors to deal with...
+
+You might get a `a start job started by dev-disk-by...` message on reboot of the Pi followed by a 90 second delay during each boot. This is normal when using swap drive.
+
 ### Connect to NavPi from external system (WIP)
 
 If you are unable to access a screen, keyboard and mouse to plug in directly to the NavPi, you can access the the web UI from a computer on the same network. You can also ssh directly to the Pi if needed to perform tasks like upgrades or other commands.
