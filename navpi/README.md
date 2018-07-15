@@ -25,6 +25,7 @@ Or install `htop:`
 ### Setup USB swap drive (WIP)
 
   - connect your USB drive to the NavPi
+  - enter the following command `sudo blkid` (This will list connected drives)
   - locate your USB drive `/dev/XXX`
   - unmount the drive with `sudo umount /dev/XXX` where `XXX` is device name
   - create/format your swap with `sudo mkswap /dev/XXX`
@@ -34,7 +35,6 @@ Or install `htop:`
   - enter `UUID=XXXX-XXXX none swap sw,pri=5 0 0` where XX's are your UUID
   - enter `sudo swapon -a`
   - enter `cat /proc/swaps` to see your new swap drive listed `dev/XXX`
-  - enter the following command `sudo blkid` (This will list connected drives)
 
 ### Configure Rasbian to use new swap drive (WIP)
 
