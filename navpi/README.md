@@ -39,15 +39,12 @@ Or install `htop:`
 ### Configure Rasbian to use new swap drive (WIP)
 
   - enter `sudo nano /etc/dphys-swapfile`
-  - uncomment `#CONF_SWAPFILE`
   - set the path to your new swap `CONF_SWAPFILE=/dev/sda1`
-  - uncomment `#CONF_SWAPSIZE`
   - set the size `CONF_SWAPSIZE=1024` (1 GB)
   - ctrl + O to `WriteOut` the file
-  - press enter
+  - press enter to confirm edit (Yes)
   - ctrl + X to `Exit` nano editor
-  - restart service `sudo /etc/init.d/dphys-swapfile restart
-
+  - enter `sudo dphys-swapfile setup`
 
 ### Errors to deal with...
 
