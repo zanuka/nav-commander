@@ -18,13 +18,14 @@ The current NavPi configuration is in need of a performance optimisation.
 
 See how much current memory you have on your Pi with `free -h`
 
-Or install `htop:`
+install `htop` for best stats:
+
 - `sudo apt-get install htop`
 - run `htop`
 
-### Setup USB swap drive (WIP)
+### 1. Setup USB swap drive (WIP)
 
-  - connect your USB drive to the NavPi
+  - connect your USB drive to the NavPi (using an 8GB drive for this test)
   - enter the following command `sudo blkid` (This will list connected drives)
   - locate your USB drive `/dev/XXX`
   - unmount the drive with `sudo umount /dev/XXX` where `XXX` is device name
@@ -36,15 +37,27 @@ Or install `htop:`
   - enter `sudo swapon -a`
   - enter `cat /proc/swaps` to see your new swap drive listed `dev/XXX`
 
-### Configure Rasbian to use new swap drive (WIP)
+### 2. Configure Raspbian to use new swap drive (WIP)
 
   - enter `sudo nano /etc/dphys-swapfile`
   - set the path to your new swap `CONF_SWAPFILE=/dev/sda1`
-  - set the size `CONF_SWAPSIZE=1024` (1 GB)
+  - set the swap size `CONF_SWAPSIZE=4096` (4 GB)
+  - set the max swap size `CONF_SWAPSIZE=7168` (7 GB)
   - ctrl + O to `WriteOut` the file
-  - press enter to confirm edit (Yes)
+  - press enter to Write `/etc/dphys-swapfile`
   - ctrl + X to `Exit` nano editor
+  - enter `cd etc/`
   - enter `sudo dphys-swapfile setup`
+
+### 3. Mounting drive on boot
+  - enter `sudo nano /etc/rc.local`
+  - add `sleep 20`
+  - add `sudo mount -a`
+  - these lines should be added before last line `exit 0`
+  - ctrl + O to `WriteOut` the file
+  - press enter to confirm
+  - ctrl + X to `Exit` nano editor
+  - enter `sudo reboot`
 
 ### Errors to deal with...
 
