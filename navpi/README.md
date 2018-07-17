@@ -65,6 +65,10 @@ These are the consolidated steps from this [guide](https://www.digitalocean.com/
 ### Verify that the swap is available
     sudo swapon --show
 
+    Output
+    NAME      TYPE    SIZE    USED    PRIO
+    /swapfile file    1G      0B      -1
+
 ### Check the output of the free utility
     free -h
 
