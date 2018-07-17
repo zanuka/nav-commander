@@ -147,7 +147,7 @@ Save and close the file.
 
 
 ## Approach 2 - Making a USB swap
-This is not my favorite approach at the moment, since it requires the extra USB drive and lots of additional configurations.
+Currently having issues w/ this approach on reboot. Work in progress...
 
 ### 1. Setup USB swap drive
 
