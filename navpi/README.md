@@ -88,6 +88,9 @@ Then add the swap info as follows
 
     echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 
+    Output
+    /swapfile none swap sw 0 0
+
 ## Tweak your Swap Settings
 Configure your NavPi's performance when dealing with swap.
 
