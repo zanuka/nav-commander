@@ -35,7 +35,7 @@ These are the consolidated steps from this [guide](https://www.digitalocean.com/
     df -h
 
 ### Create swap file
-    sudo fallocate -l 1G /swapfile
+    sudo fallocate -l 2G /swapfile
 
 ### Verify correct amount of space reserved
     ls -lh /swapfile
@@ -67,7 +67,7 @@ These are the consolidated steps from this [guide](https://www.digitalocean.com/
 
     Output
     NAME      TYPE    SIZE    USED    PRIO
-    /swapfile file    1G      0B      -1
+    /swapfile file    2G      0B      -1
 
 ### Check the output of the free utility
     free -h
