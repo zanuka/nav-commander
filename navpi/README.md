@@ -97,7 +97,7 @@ Configure your NavPi's performance when dealing with swap.
 ### Configure swappiness
 The swappiness parameter configures how often your system swaps data out of RAM to the swap space. This is a value between 0 and 100 that represents a percentage.
 
-    vm.swappiness = 10
+    sudo sysctl vm.swappiness=10
 
     Ouput
     vm.swappiness = 10
