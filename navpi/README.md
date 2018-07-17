@@ -19,6 +19,7 @@ The current NavPi configuration is in need of a performance optimisation.
 ### Expand your SD card
 
 For best results, follow this knowledge base article tutorial to expand your SD card prior to next steps.
+(This article is in the works and not publised to site yet)
 
 ### Prepare to make swap
 
@@ -60,6 +61,10 @@ These are the consolidated steps from this [guide](https://www.digitalocean.com/
 
 ### Enable swap file
     sudo swapon /swapfile
+
+    Output
+    Setting up swapspace version 1, size = 2097148 KiB
+    no label. UUID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 
 ### Verify that the swap is available
     sudo swapon --show
