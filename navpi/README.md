@@ -57,14 +57,10 @@ These are the consolidated steps from this [guide](https://www.digitalocean.com/
 
     Output
     Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
-    no label, UUID=6e965805-2ab9-450f-aed6-577e74089dbf
+    no label. UUID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 
 ### Enable swap file
     sudo swapon /swapfile
-
-    Output
-    Setting up swapspace version 1, size = 2097148 KiB
-    no label. UUID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 
 ### Verify that the swap is available
     sudo swapon --show
