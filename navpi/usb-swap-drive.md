@@ -38,9 +38,6 @@ Your USB drive has mosty likely come preformatted as FAT, however you'll get far
 ### Mount the USB
     sudo mount -t uid=pi,gid=pi /dev/sda1 /mnt/usbstorage
 
-### Uninstall the automounting software
-    sudo apt-get remove usbmount --purge
-
 ### Ensure USB mounts on system boot
     sudo nano /etc/fstab
 
