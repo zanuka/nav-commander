@@ -14,7 +14,7 @@ Connect your USB drive to the NavPi
 Make note of the disk that represents your USB drive, which in this example is `dev/sda1`
 
 ### Format drive to EXT4
-Your USB drive has mosty likely come preformatted as FAT, however you'll get far more speed by using EXT4. FAT can be understood by Linux file system but is not native.
+Your USB drive has mosty likely come preformatted as FAT, however you'll get far more speed and reliability by using EXT4. FAT can be understood by Linux file system but is not native.
 
 **First unmount the USB**
 
@@ -25,10 +25,21 @@ Your USB drive has mosty likely come preformatted as FAT, however you'll get far
     sudo mkfs.ext4 /dev/sda1
 
 ### Create mount directory
-    sudo mkdir /usbdrive
+    sudo mkdir /mnt/usbstorage
+
+### Make Pi the owner of new directory
+    sudo chown -R pi:pi /mnt/usbstorage
+    sudo chmod -R 775 /mnt/usbstorage
+
+### Set all future permissions for mount point to pi user
+    sudo setfacl -Rdm g:pi:rwx /mnt/usbstorage
+    sudo setfacl -Rm g:pi:rwx /mnt/usbstorage
 
 ### Mount the USB
-    sudo mount /dev/sda1 /usbdrive
+    sudo mount -t uid=pi,gid=pi /dev/sda1 /mnt/usbstorage
+
+### Uninstall the automounting software
+    sudo apt-get remove usbmount --purge
 
 ### Ensure USB mounts on system boot
     sudo nano /etc/fstab
