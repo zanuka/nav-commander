@@ -28,11 +28,12 @@ Your USB drive has mosty likely come preformatted as FAT, however you'll get far
     sudo nano /etc/fstab
 
 When file is opened in nano, add the following line:
+
     /dev/sda1 /usbdrive ext4 defaults,nofail 0 1
 
 _Note: the 'nofail' mount option tells Raspbian to ignore this entry if the USB drive is not plugged in_
 
-ctrl + O to `WriteOut` the file, then press Enter, then ctrl + X to close Nano
+ctrl + O to `WriteOut` the file, then press Enter, then ctrl + X to close nano
 
 ### Make sure drive is not mounted
     sudo umount /dev/sda1
@@ -62,12 +63,14 @@ If successful, you should see details about your new swap in the Output
     sudo nano /etc/dphys-swapfile
 
 **Set path to new swap:**
+
     CONF_SWAPFILE=/dev/sda1
 
 **Set new swap size:**
+
     CONF_SWAPSIZE=1024
 
-ctrl + O to `WriteOut` the file, then press Enter, then ctrl + X to close Nano
+ctrl + O to `WriteOut` the file, then press Enter, then ctrl + X to close nano
 
 ### Reboot your NavPi
     sudo reboot
