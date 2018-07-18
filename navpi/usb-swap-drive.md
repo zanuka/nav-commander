@@ -60,11 +60,14 @@ If successful, you should see details about your new swap in the Output
 
 ctrl + O to `WriteOut` the file, then press Enter, then ctrl + X to close nano
 
-### Setup the new swap config
-    sudo dphys-swapfile setup
-
 ### Activate the new swap
-    sudo dphys-swapfile swapon
+    sudo /etc/init.d/dphys-swapfile restart
+
+    Output
+    [ok] Restarting dphys-swapfile (via systemctl): dyphys-swapfile.service.
+
+### Verify memory and new swap
+    free -m
 
 ### Reboot your NavPi
     sudo reboot
