@@ -16,6 +16,12 @@ Make note of the disk that represents your USB drive, which in this example is `
 ### Format drive to EXT4
 Your USB drive has mosty likely come preformatted as FAT, however you'll get far more speed by using EXT4. FAT can be understood by Linux file system but is not native.
 
+**First unmount the USB**
+
+    sudo umount /dev/sda1
+
+**Now reformat to ext4**
+
     sudo mkfs.ext4 /dev/sda1
 
 ### Create mount directory
@@ -38,24 +44,6 @@ ctrl + O to `WriteOut` the file, then press Enter, then ctrl + X to close nano
 ### Make sure drive is not mounted
     sudo umount /dev/sda1
 
-### Create the swap
-    sudo mkswap /dev/sda1
-
-    Output
-    Setting up swapspace version 1, size = 7861756 KiB
-    no label, UUID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX
-
-### Enable the swap
-    sudo swapon -a
-
-### Verify new swap
-    cat /proc/swaps
-
-    Output
-    Filename      Type         Size      Used      Priority
-    /var/swap     file         102396    1124      -1
-    /dev/sda1     partition    7861756   0         -2
-
 If successful, you should see details about your new swap in the Output
 
 ## Configure Raspbian to use swap, set swap size
@@ -72,8 +60,22 @@ If successful, you should see details about your new swap in the Output
 
 ctrl + O to `WriteOut` the file, then press Enter, then ctrl + X to close nano
 
+### Setup the new swap config
+    sudo dphys-swapfile setup
+
+### Activate the new swap
+    sudo dphys-swapfile swapon
+
 ### Reboot your NavPi
     sudo reboot
+
+### Verify new swap
+    cat /proc/swaps
+
+    Output
+    Filename      Type         Size      Used      Priority
+    /var/swap     file         102396    1124      -1
+    /dev/sda1     partition    7861756   0         -2
 
 ### Check current memory usage
 
