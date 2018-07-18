@@ -38,21 +38,17 @@ Your USB drive has mosty likely come preformatted as FAT, however you'll get far
 ### Mount the USB
     sudo mount -t uid=pi,gid=pi /dev/sda1 /mnt/usbstorage
 
-### Ensure USB mounts on system boot
+### Ensure USB auto mounts on system boot
+
     sudo nano /etc/fstab
 
 When file is opened in nano, add the following line:
 
-    /dev/sda1 /usbdrive ext4 defaults,nofail 0 1
+    /dev/sda1    /mnt/usbstorage    ext4   nofail    0   0
 
 _Note: the 'nofail' mount option tells Raspbian to ignore this entry if the USB drive is not plugged in_
 
 ctrl + O to `WriteOut` the file, then press Enter, then ctrl + X to close nano
-
-### Make sure drive is not mounted
-    sudo umount /dev/sda1
-
-If successful, you should see details about your new swap in the Output
 
 ## Configure Raspbian to use swap, set swap size
 
