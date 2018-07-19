@@ -17,5 +17,5 @@ The current NavPi configuration is in need of a performance optimisation.
 
 Currently, the following options are available depending upon your preference:
 
-  - [SD swap](sd-swap-drive.md)
-  - [USB swap](usb-swap-drive.md)
+  - [SD swap disk](sd-swap-drive.md)
+  - [USB swap disk](usb-swap-drive.md)

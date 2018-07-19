@@ -1,4 +1,4 @@
-# Creating swap on USB drive
+# Configuring NavPi to use a USB drive for swap disk
 In this example we are using an 8GB USB drive
 
 ### Insert drive
