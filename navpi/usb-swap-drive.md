@@ -1,5 +1,5 @@
-# Configuring NavPi to use a USB drive for swap disk
-If you are interested in using a USB drive as a swap disc, this guide should get you sorted. Any size drive could be used, but for this guide I'm using an 8GB USB drive I bought for $13. The drive is pre-formatted FAT32.
+# Configuring NavPi to use USB drive for swap space
+If you are interested in using a USB drive as a swap space, this guide should get you sorted. Any size drive could be used, but for this guide I'm using an 8GB USB drive I bought for $13. The drive is pre-formatted FAT32.
 
 ### Insert drive
 Connect USB drive to the NavPi
