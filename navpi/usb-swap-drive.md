@@ -1,8 +1,8 @@
 # Configuring NavPi to use a USB drive for swap disk
-In this example we are using an 8GB USB drive
+If you are interested in using a USB drive as a swap disc, this guide should get you sorted. Any size drive could be used, but for this guide I'm using an 8GB USB drive I bought for $13. The drive is pre-formatted FAT32.
 
 ### Insert drive
-Connect your USB drive to the NavPi
+Connect USB drive to the NavPi
 
 ### List drives connected to your NavPi
     sudo blkid
