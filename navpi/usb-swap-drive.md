@@ -87,7 +87,7 @@ Built-in commands include:
     free -h
     top
 
-htop is also an option:
+**pro tip - install htop** - a nice option for monitoring interactively. It's a nice way to filter on running processes, like 'nav'. It combines the functionality of top and iotop into a single screen.
 
     sudo apt-get install htop
     htop
