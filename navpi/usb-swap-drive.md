@@ -24,19 +24,11 @@ Your USB drive has mosty likely come preformatted as FAT, however you'll get far
 
     sudo mkfs.ext4 /dev/sda1
 
+    Output
+    Writing superblocks and filesystem accounting information: done
+
 ### Create mount directory
-    sudo mkdir /mnt/usbstorage
-
-### Make Pi the owner of new directory
-    sudo chown -R pi:pi /mnt/usbstorage
-    sudo chmod -R 775 /mnt/usbstorage
-
-### Set all future permissions for mount point to pi user
-    sudo setfacl -Rdm g:pi:rwx /mnt/usbstorage
-    sudo setfacl -Rm g:pi:rwx /mnt/usbstorage
-
-### Mount the USB
-    sudo mount -t uid=pi,gid=pi /dev/sda1 /mnt/usbstorage
+    sudo mkdir /navswap
 
 ### Ensure USB auto mounts on system boot
 
@@ -44,7 +36,7 @@ Your USB drive has mosty likely come preformatted as FAT, however you'll get far
 
 When file is opened in nano, add the following line:
 
-    /dev/sda1    /mnt/usbstorage    ext4   nofail    0   0
+    /dev/sda1    /navswap    ext4   nofail    0   0
 
 _Note: the 'nofail' mount option tells Raspbian to ignore this entry if the USB drive is not plugged in_
 
@@ -56,16 +48,19 @@ ctrl + O to `WriteOut` the file, then press Enter, then ctrl + X to close nano
 
 **Set path to new swap:**
 
-    CONF_SWAPFILE=/dev/sda1
+    CONF_SWAPFILE=/navswap/swap
 
 **Set new swap size:**
 
-    CONF_SWAPSIZE=1024
+    CONF_SWAPSIZE=2048
+
+_In this example we'll go for a 2GB swap_
 
 ctrl + O to `WriteOut` the file, then press Enter, then ctrl + X to close nano
 
-### Activate the new swap
-    sudo /etc/init.d/dphys-swapfile restart
+### Recreate swap and turn it on
+    sudo dphys-swapfile setup
+    sudo dphys-swapfile swapon
 
     Output
     [ok] Restarting dphys-swapfile (via systemctl): dyphys-swapfile.service.
@@ -80,11 +75,10 @@ ctrl + O to `WriteOut` the file, then press Enter, then ctrl + X to close nano
     cat /proc/swaps
 
     Output
-    Filename      Type         Size      Used      Priority
-    /var/swap     file         102396    1124      -1
-    /dev/sda1     partition    7861756   0         -2
+    Filename         Type         Size      Used      Priority
+    /navswap/swap    file         2097418   0         -1
 
-### Check current memory usage
+### Check memory usage with swap in place
 
 There are several options for checking memory use.
 
