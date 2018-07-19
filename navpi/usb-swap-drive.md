@@ -42,7 +42,7 @@ _Note: the 'nofail' mount option tells Raspbian to ignore this entry if the USB 
 
 ctrl + O to `WriteOut` the file, then press Enter, then ctrl + X to close nano
 
-## Configure Raspbian to use swap, set swap size
+### Set swap location and size
 
     sudo nano /etc/dphys-swapfile
 
@@ -58,12 +58,14 @@ _In this example we'll go for a 2GB swap_
 
 ctrl + O to `WriteOut` the file, then press Enter, then ctrl + X to close nano
 
-### Recreate swap and turn it on
+### Recreate and activate swap
     sudo dphys-swapfile setup
     sudo dphys-swapfile swapon
 
     Output
     [ok] Restarting dphys-swapfile (via systemctl): dyphys-swapfile.service.
+
+_Note: this might take awhile_
 
 ### Verify memory and new swap
     free -m
