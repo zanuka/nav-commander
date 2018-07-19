@@ -95,3 +95,7 @@ Built-in commands include:
 
     sudo apt-get install htop
     htop
+
+You should now see the swap drive being monitored.
+
+### Enjoy stability
