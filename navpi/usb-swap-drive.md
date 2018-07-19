@@ -5,13 +5,15 @@ In this example we are using an 8GB USB drive
 Connect your USB drive to the NavPi
 
 ### List drives connected to your NavPi
-    sudo fdisk -l
+    sudo blkid
 
     Output
     Device     Boot    Start     End   Sectors     Size    Id    Type
-    /dev/sda1           8192    93596   85405      41.7M   c     W95 FAT32 (LBA)
+    ...
+    /dev/mmcb1k0p1: LABEL="boot" UUID="XXXX-XXXX" TYPE="vfat" PARTUUID="db06311d-01"
+    /dev/sda1: LABEL="UNTITLED" UUID="XXXX-XXXX" TYPE="vfat" PARTUUID="a9be7089-10"
 
-Make note of the disk that represents your USB drive, which in this example is `dev/sda1`
+You should see four entries, with the last one being your USB drive - `dev/sda1`
 
 ### Format drive to EXT4
 Your USB drive has mosty likely come preformatted as FAT, however you'll get far more speed and reliability by using EXT4. FAT can be understood by Linux file system but is not native.
