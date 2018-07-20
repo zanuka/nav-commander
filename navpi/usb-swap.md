@@ -1,5 +1,21 @@
 # Configuring NavPi to use USB drive for swap space
-If you are interested in using a USB drive as a swap space, this guide should get you sorted. Any size drive could be used, but for this guide I'm using an 8GB USB drive I bought for $13. The drive is pre-formatted FAT32.
+If you are interested in using a USB drive as a swap space, this guide should get you sorted. Any size drive could be used, but for this guide we are using an 8GB USB drive. The drive is pre-formatted FAT32 but we'll change it to EXT4.
+
+## Let's get started
+
+### Backup your current NavPi img
+Before proceeding with this swap configuration, it is worth making a backup image of your NavPi's SD card so if it fails, you can easily restore to this point. Follow this [guide](https://info.navcoin.org/knowledge-base/creating-a-navpi-back-up-img/).
+
+### Backup your wallet.dat
+To ensure you don't lose any coins while making configuration changes to your NavPi, it's essential to backup the wallet.dat file. This holds your private keys. With a backup of the wallet.dat you can always restore your wallet.
+
+First, make sure your have encrypted your wallet. Then proceed with the following steps:
+
+1. Open the WebUI
+2. Go to `control`
+3. Scroll down to `security`
+4. *Click* `Backup Wallet`. This will download the wallet.dat file to your preferred device (USB, HD)
+5. Save the wallet backup and rename it to `wallet.dat`
 
 ### Insert drive
 Connect USB drive to the NavPi
