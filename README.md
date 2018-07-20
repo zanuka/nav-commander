@@ -1,4 +1,4 @@
-# navinator
+# navigate
 
 Development docs, notes, and workflow tips for NavCoin projects.
 
