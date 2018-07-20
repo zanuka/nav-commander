@@ -1,13 +1,16 @@
 # Creating swap on NavPi SD card
 
-### Expand your SD card
+These are the consolidated steps from a post by Justin Ellingwood called [Add Swap Space on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04).
 
-For best results, follow this knowledge base article tutorial to expand your SD card prior to next steps.
-(This article is in the works and not publised to site yet)
+The configuration has been tested on the current version of the NavPi, running Rapsbian GNU/Linux 8 (jessie)
 
-### Prepare to make swap
+### Prerequisites, Caveats
+For best results, it's recommended to utilize a USB drive as your swap space, due to the fact that repeated reads/writes to the SD card will eventually wear it out. You can follow this [USB swap guide](usb-swap.md) or proceed with the SD swap configuration below. For example, you may just want to use the SD swap temporarily until you're ready to move to the USB swap solution.
 
-These are the consolidated steps from this [guide](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04) on DigitalOcean's site
+## Let's get started
+
+### Backup your current NavPi img
+Before proceeding with this swap configuration, it is worth making a backup image of the SD card so if it fails, you can easily restore to this point. To do so, follow this [guide](https://info.navcoin.org/knowledge-base/creating-a-navpi-back-up-img/).
 
 ### Check system for swap info
     sudo swapon --show
@@ -19,39 +22,39 @@ These are the consolidated steps from this [guide](https://www.digitalocean.com/
     df -h
 
 ### Create swap file
-    sudo fallocate -l 2G /swapfile
+    sudo fallocate -l 2G /navswap
 
 ### Verify correct amount of space reserved
-    ls -lh /swapfile
+    ls -lh /navswap
 
     Output
-    -rw-r--r-- 1 root root 1.0G Apr 25 11:14 /swapfile`
+    -rw-r--r-- 1 root root 1.0G Apr 25 11:14 /navswap`
 
 ### Make the file only accessible to root
-    sudo chmod 600 /swapfile
+    sudo chmod 600 /navswap
 
 ### Verify permissions change
-    ls -lh /swapfile
+    ls -lh /navswap
 
     Output
-    -rw------- 1 root root 1.0G Apr 25 11:14 /swapfile
+    -rw------- 1 root root 1.0G Apr 25 11:14 /navswap
 
 ### Mark file as swap space
-    sudo mkswap /swapfile
+    sudo mkswap /navswap
 
     Output
     Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
     no label. UUID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 
 ### Enable swap file
-    sudo swapon /swapfile
+    sudo swapon /navswap
 
 ### Verify that the swap is available
     sudo swapon --show
 
     Output
     NAME      TYPE    SIZE    USED    PRIO
-    /swapfile file    2G      0B      -1
+    /navswap file    2G      0B      -1
 
 ### Check the output of the free utility
     free -h
@@ -70,10 +73,10 @@ First backup your `/etc/fstab` file
 
 Then add the swap info as follows
 
-    echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+    echo '/navswap none swap sw 0 0' | sudo tee -a /etc/fstab
 
     Output
-    /swapfile none swap sw 0 0
+    /navswap none swap sw 0 0
 
 ## Tweak your Swap Settings
 Configure your NavPi's performance when dealing with swap.
@@ -127,3 +130,28 @@ Save and close the file.
 
 ### Reboot NavPi
     sudo reboot
+
+### Verify new swap
+    cat /proc/swaps
+
+    Output
+    Filename         Type         Size      Used      Priority
+    /navswap         file         2097418   0         -1
+
+### Check memory usage with swap in place
+
+There are several options for checking memory use.
+
+Built-in commands include:
+
+    free -h
+    top
+
+**pro tip** - Install htop, a nice option for monitoring interactively. It's a nice way to filter on running processes, like 'nav'. It combines the functionality of top and iotop into a single screen.
+
+    sudo apt-get install htop
+    htop
+
+You should now see the swap drive being monitored.
+
+### Enjoy Stability
