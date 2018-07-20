@@ -12,6 +12,17 @@ For best results, it's recommended to utilize a USB drive as your swap space, du
 ### Backup your current NavPi img
 Before proceeding with this swap configuration, it is worth making a backup image of the SD card so if it fails, you can easily restore to this point. To do so, follow this [guide](https://info.navcoin.org/knowledge-base/creating-a-navpi-back-up-img/).
 
+### Backup your wallet.dat
+To ensure you don't lose any coins while making configuration changes to your NavPi, it's essential to backup the wallet.dat file. This holds your private keys. With a backup of the wallet.dat you can always restore your wallet.
+
+First, make sure your have encrypted your wallet. Then proceed with the following steps:
+
+1. Open the WebUI
+2. Go to `control`
+3. Scroll down to `security`
+4. *Click* `Backup Wallet`. This will download the wallet.dat file to your preferred device (USB, HD)
+5. Save the wallet backup and rename it to `wallet.dat`
+
 ### Check system for swap info
     sudo swapon --show
 
