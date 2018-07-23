@@ -19,3 +19,4 @@ Currently, the following options are available depending upon your preference:
 
   - [setup SD swap](sd-swap.md)
   - [setup USB swap](usb-swap.md)
+  - [setup ZRAM swap](zram-swap.md)
