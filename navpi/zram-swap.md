@@ -80,7 +80,7 @@ The permissions should be `drwxrwxrwx` on `blocks`, `cfund`, `chainstate`
     -/+ buffers/cache:   760M      163M
     Swap:       99M       29M       70M
 
-**pro tip** - Install htop, a nice option for monitoring interactively. It's a nice way to filter on running processes, like 'nav'. It combines the functionality of top and iotop into a single screen.
+**Pro Tip:** Install htop, a nice option for monitoring interactively. It's a nice way to filter on running processes, like 'nav'. It combines the functionality of top and iotop into a single screen. It's not a necessity, you can always just use `free -h`.
 
     sudo apt-get install htop
     htop
