@@ -93,7 +93,8 @@ Now that ZRAM has been enabled on your NavPi, the system should be stable.
 
 You may still notice sub-optimal performance while using the built-in Chromium UI. If you have another computer available on the same home network, you can view the WebUI of the NavPi.
 
-1. Visit the IP-address of the NavPi on any web browser
+1. Get the NavPi's IP address with `ifconfig`
+1. Enter that IP-address of the NavPi on any web browser (on same network)
 2. Ignore warning (click proceed) about an unsafe certificate
 3. Enter your password for WebUI (default is NAV if you haven't changed it yet)
 
