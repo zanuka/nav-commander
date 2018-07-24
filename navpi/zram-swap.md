@@ -55,18 +55,6 @@ This will download and copy the `zram.sh` script to your `/usr/bin` directory
     Output
     /usr/bin/zram.sh &
 
-### Change .navcoin4 directory permissions
-
-    cd /home/stakebox/.navcoin4
-    sudo chown www-data:www-data -R chainstate cfund blocks chainstate
-    sudo chmod 777 -R cfund blocks chainstate
-
-If successful, you'll be able to see that the directories have the correct permissions.
-
-    ls -l
-
-The permissions should be `drwxrwxrwx` on `blocks`, `cfund`, `chainstate`
-
 ### Reboot NavPi
     sudo reboot
 
