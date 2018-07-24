@@ -48,13 +48,13 @@ First, make sure your have encrypted your wallet. Then proceed with the followin
     ls -lh /navswap
 
     Output
-    -rw------- 1 root root 1.0G Apr 25 11:14 /navswap
+    -rw------- 1 root root 2.0G Apr 25 11:14 /navswap
 
 ### Mark file as swap space
     sudo mkswap /navswap
 
     Output
-    Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
+    Setting up swapspace version 1, size = 2048 MiB (1073737728 bytes)
     no label. UUID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 
 ### Enable swap file
@@ -73,7 +73,7 @@ First, make sure your have encrypted your wallet. Then proceed with the followin
     Output
                   total        used        free      shared  buff/cache   available
     Mem:           488M         37M         96M        652K        354M        425M
-    Swap:          1.0G          0B        1.0G
+    Swap:          2.0G          0B        2.0G
 
 The swap has been set up successfully. Operating system will begin to use it as necessary.
 
@@ -120,7 +120,7 @@ Check the current cache pressure setting:
     Ouput
     100
 
-By default, the system removes inode information from the cache too quickly. 
+By default, the system removes inode information from the cache too quickly.
 
 Set this to a more conservative setting like 50:
 
